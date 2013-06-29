@@ -22,6 +22,25 @@ def quickSort(arr):
     if len(arr) <= 1:
         return arr
     else:
-    	pass
-    	
+    	#pass
+        # Instance a pivot with a list empty
+        pivot = []
+        # Write a for in i to argument arr, the arr contain the amount of list and traveling all elements of list
+        for i in arr:
+            # If less pivot
+            if i < pivot:
+                # Add i to list number_less
+                number_less.append(i)
+            elif i > pivot:
+                # Add i to list number_more
+                number_more.append(i)
+            else:
+                # Else no one, add in pivot_list
+                pivot_list.append(i)
+        # After travel all list return all elements in order number_less, pivot_list and numer_more        
+        return number_less + pivot_list + number_more
+
+
+quick = quickSort(quick)
+# Show
 print quick
